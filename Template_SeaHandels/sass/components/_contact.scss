@@ -1,0 +1,111 @@
+@import "components/variables";
+@import "components/media-queries";
+
+.widget-contact-title {
+    padding: 0 15px;
+    margin-bottom: 50px;
+    text-align: center;
+    h2, h3 {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin-top: 0;
+    }
+    .contact-title {
+        font-size: 30px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+    .contact-title-sub {
+        font-size: 17px;
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 2;
+    }
+    .line-title {
+        display: inline-block;
+        margin: 0;
+    }
+}
+.widget-contact-address {
+    padding-right: 150px;
+    margin-bottom: 50px;
+    padding-left: 0;
+    @include max1200 {
+        padding-right: 100px;
+    }
+    @include max992 {
+        padding-right: 50px;
+    }
+    @include max768 {
+        padding-right: 0;
+    }
+    .contact-address {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        .contact-text {
+            font-family: $open-sit;
+            color: #000;
+            font-size: 16px;
+            @include max480 {
+                font-size: 15px;
+            }
+            a {
+                color: #000;
+                &:hover, &:focus {
+                    color: $violet;
+                }
+            }
+        }
+        i {
+            min-width: 70px;
+            font-size: 30px;
+            text-align: left;
+            display: block;
+            float: left;
+            color: $violet;
+        }
+    }
+}
+.widget-contact-form {
+    .contact-form-content {
+        form {
+            .contact-form-wrap {
+                float: left;
+                width: 100%;
+                .form-label {
+                    color: #555;
+                    font-size: 13px;
+                    margin-bottom: 10px;
+                }
+                .form-control {
+                    height: 44px;
+                    border-radius: 3px;
+                    box-shadow: none;
+                    font-size: 16px;
+                    font-family: $open;
+                    border-color: #ddd;
+                }
+                textarea {
+                    &.form-control {
+                        min-height: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form-btn {
+    .btn {
+        background-color: $orange;
+        color: #fff;
+        font-size: 16px;
+        letter-spacing: 1px;
+        border-radius: 3px;
+        min-width: 80px;
+        &:hover, &:focus {
+            background-color: #555;
+        }
+    }
+}

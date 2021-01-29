@@ -1,0 +1,50 @@
+@import "components/variables";
+@import "components/media-queries";
+.widget-detail-post {
+    margin-bottom: 100px;
+}
+.detail-post-title {
+    font-size: 25px;
+    display: block;
+    margin: 0 0 15px;
+    color: #000;
+    font-family: $open-s;
+}
+.content-post-text {
+    margin-bottom: 50px;
+    line-height: 2;
+}
+.content-post-text *{
+    max-width: 100%;
+}
+.widget-detail-post {
+    .widget-title {
+        text-align: left;
+    }
+    .main-title {
+        font-size: 17px;
+        border-left: 3px solid $violet;
+        padding: 0 10px;
+        margin-bottom: 15px;
+    }
+    .related-posts {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 15px;
+        li {
+            float: left;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #000;
+            display: inline-block;
+            &:hover, &:focus {
+                color: $violet;
+            }
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+}

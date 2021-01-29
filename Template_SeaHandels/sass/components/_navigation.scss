@@ -1,0 +1,235 @@
+
+@import "components/variables";
+@import "components/media-queries";
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+.navbar-inner {
+    float: right;
+    position: relative;
+    @include max1200 {
+        width: 100%;
+        max-width: 95%;
+    }
+    @include max992 {
+        max-width: 100%;
+    }
+    .nav-button {
+        background-color: $violet;
+        padding: 5px 0;
+        float: right;
+        width: 100%;
+        display: none;
+        @include max992 {
+            display: block;
+        }
+        .navbar-toggle {
+            border: 0;
+            @include max992 {
+                display: block;
+            }
+        }
+    }
+    .navbar-toggle {
+        float: none;
+        margin: 0 auto;
+        border: 1px solid #fff;
+        @include max768 {
+            display: block;
+        }
+        .icon-bar {
+            background-color: #fff;
+        }
+    }
+    .nav-main {
+        text-align: center;
+        float: right;
+        background-color: $violet;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        @include max1200 {
+            float: none;
+            text-align: center;
+        }
+        @include max992 {
+            display: none!important;
+        }
+        .navbar-nav {
+            position: relative;
+            > li {
+                &:hover {
+                    ul {
+                        display: block;
+                    }
+                }
+            }
+            @include max992 {
+                &::before, &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .navbar-collapse {
+        &.nav-main {
+            .navbar-nav {
+                @include max1200 {
+                    float: none;
+                    display: inline-block;
+                    margin: 0 auto;
+                }
+                > li {
+                    padding: 0 15px;
+                    > a {
+                        padding: 20px 0;
+                        i {
+                            margin-right: 5px;
+                        }
+                        &:hover, &:focus {
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-nav {
+            li {
+                a {
+                    color: #fff;
+                    font-family: $roboto;
+                    font-weight: 700;
+                    position: relative;
+                    padding: 20px 15px;
+                    white-space: nowrap;
+                    &:hover, &:focus {
+                        background-color: transparent;
+                        color: $blue;
+                        outline: none;
+                    }
+                    @include max1200 {
+                        font-size: 14px;
+                    }
+                }
+                &.active {
+                    a {
+                        color: #fff;
+                    }
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    text-align: left;
+                    background-color: #f7f7f7;
+                    min-width: 230px;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    display: none;
+                    z-index: 999;
+                    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+                    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+                    li {
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                        a {
+                            color: #333;
+                            display: block;
+                            padding: 12px 20px;
+                            background-color: transparent;
+                            &:hover, &:focus {
+                                color: #fff;
+                                background-color: $orange;
+                                @include transition(all 0.25s ease);
+                            }
+                            i {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    .navbar-responsive {
+        text-align: left;
+        background-color: #fff;
+        width: 100%;
+        float: left;
+        padding: 0;
+        &.collapse {
+            display: none!important;
+            &.in {
+                @include max992 {
+                    display: block!important;
+                }
+            }
+        }
+        .navbar-nav {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            li {
+                border-bottom: 1px solid #ddd;
+                float: left;
+                width: 100%;
+                a {
+                    color: #696969;
+                    padding: 15px;
+                    @include min768 {
+                        padding-left: 0;
+                    }
+                    &:after {
+                        right: 15px;
+                        position: absolute;
+                        top: 0;
+                        color: #696969;
+                        font-size: 25px;
+                        line-height: 43px;
+                    }
+                    &:hover, &:focus {
+                        color: $violet;
+                    }
+                }
+                .arrow-right {
+                    &:after {
+                        content: '\f0da';
+                        font-size: 15px;
+                        font-family: FontAwesome;
+                    }
+                }
+                .arrow-down {
+                    &:after {
+                        content: '\f0d7';
+                    }
+                }
+                ul {
+                    position: relative;
+                    width: 100%;
+                    top: auto;
+                    left: auto;
+                    background-color: transparent;
+                    padding: 0;
+                    box-shadow: none;
+                    border: 0;
+                    border-top: 1px solid #ddd;
+                    li {
+                        padding-left: 15px;
+                        a {
+                            color: #696969;
+                            padding: 15px 30px;
+                            &:hover, &:focus {
+                                background-color: transparent;
+                                color: $violet;
+                            }
+                        }
+                    }
+                }
+            }
+            .active {
+                a {
+                    color: $violet!important;
+                }
+            }
+        }
+    }
+}

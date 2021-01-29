@@ -1,0 +1,195 @@
+@import "components/variables";
+@import "components/media-queries";
+.footer-site {
+    background-color: #181a47;
+    padding-top: 40px;
+}
+.footer-col {
+    margin-bottom: 30px;
+}
+.footer-about {
+    margin-bottom: 60px;
+}
+.footer-logo {
+    text-align: left;
+    margin-bottom: 30px;
+    @include max992 {
+        text-align: center;
+    }
+    a {
+        display: inline-block;
+        width: 160px;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    h2 {
+        font-size: 20px;
+        color: #fff;
+        font-family: $open-b;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        display: inline-block;
+    }
+}
+.footer-social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include max992 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    li {
+        float: left;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin-right: 10px;
+        @include max992 {
+            float: none;
+        }
+    }
+    a {
+        display: block;
+        color: #fff;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border: 1px solid rgba(255,255,255,0.5);
+        &:hover, &:focus {
+            color: $violet;
+            background-color: #fff;
+        }
+    }
+}
+.footer-title {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 30px;
+    &::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin-top: 10px;
+        background-color: $orange;
+    }
+}
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 15px;
+        color: #fff;
+    }
+    a {
+        color: #fff;
+        font-size: 13px;
+        &:hover, &:focus {
+            color: $orange;
+        }
+        i {
+            margin-right: 10px;
+        }
+    }
+}
+.footer-contact {
+    ul {
+        margin-bottom: 30px;
+        i {
+            min-width: 35px;
+            height: 35px;
+            line-height: 35px;
+            margin-right: 10px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        li {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        a {
+            font-size: 12px;
+        }
+        span {
+            font-family: $open-s;
+            display: block;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.8);
+        }
+    }
+}
+.footer-copyright {
+    padding: 15px 0;
+    text-align: center;
+    color: #ddd;
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    a {
+        color: #ddd;
+        color: rgba(255,255,255,0.7);
+        &:hover, &:focus {
+            color: #dc0e32;
+        }
+    }
+}
+
+.footer-product {
+    padding-top: 15px;
+    .footer-list {
+        margin-bottom: 15px;
+        li {
+            margin: 0;
+            font-size: 13px;
+        }
+    }
+    .view-site {
+        margin-top: 0;
+        text-align: left;
+        li {
+            text-align: left;
+        }
+    }
+}
+// Back to Top
+#back-top {
+    a {
+        width: 45px;
+        height: 45px;
+        right: 20px;
+        bottom: 20px;
+        position: fixed;
+        display: block;
+        text-align: center;
+        color: #fff;
+        background-color: #5D5D5D;
+        border-radius: 3px;
+        z-index: 9999;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        i {
+            font-size: 18px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -9px;
+            margin-top: -9px;
+        }
+        &:hover, &:focus {
+            background-color: $red;
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+    }
+}

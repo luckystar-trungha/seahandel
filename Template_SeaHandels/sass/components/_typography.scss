@@ -1,0 +1,71 @@
+$font-path: "../fonts/" !default;
+// Open sans
+@font-face {
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans'), url('#{$font-path}OpenSans-Regular.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Open Sans Light';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans Light'), url('#{$font-path}OpenSans-Light.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Open Sans Semibold Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans Semibold Italic'), url('#{$font-path}OpenSans-SemiboldItalic.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Open Sans Semibold';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans Semibold'), url('#{$font-path}OpenSans-Semibold.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Open Sans Light Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans Light Italic'), url('#{$font-path}OpenSans-LightItalic.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Open Sans Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans Italic'), url('#{$font-path}OpenSans-Italic.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Open Sans Extrabold Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans Extrabold Italic'), url('#{$font-path}OpenSans-ExtraBoldItalic.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Open Sans Extrabold';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans Extrabold'), url('#{$font-path}OpenSans-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Open Sans Bold Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans Bold Italic'), url('#{$font-path}OpenSans-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Open Sans Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans Bold'), url('#{$font-path}OpenSans-Bold.woff') format('woff');
+}
